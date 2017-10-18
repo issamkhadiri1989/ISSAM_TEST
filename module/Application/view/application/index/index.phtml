@@ -1,0 +1,53 @@
+
+
+<h3>Category Order</h3>
+<table id="cat-tab">
+	<tr>
+	<?php foreach ($this->JeuTrie->categoryOrder as $cat) :?>
+		<th><?php echo  $cat?></th>
+	<?php endforeach;?>
+	</tr>
+</table>
+
+
+<h3>Value Order</h3>
+<table id="val-tab">
+	<tr>
+	<?php foreach ($this->JeuTrie->valueOrder as $val) :?>
+		<th><?php echo  $val?></th>
+	<?php endforeach;?>
+	</tr>
+</table>
+
+<h3>Cards before Ordering :</h3>
+<table class="cartes">
+	<tr>
+	<?php foreach ($this->JeuNonTrie as $carte) :?>
+		<th><?php echo $carte->category?></th>
+	<?php endforeach;?>
+	</tr>
+	
+	<tr>
+	<?php foreach ($this->JeuNonTrie as $carte) :?>
+		<th><?php echo $carte->value?></th>
+	<?php endforeach;?>
+	</tr>
+</table>
+
+
+<h3>Cards after Ordering :</h3>
+<table class="cartes">
+	<tr>
+	<?php foreach ($this->JeuTrie->cards as $carte) :?>
+		<th><?php echo $carte->category?></th>
+	<?php endforeach;?>
+	</tr>
+	
+	<tr>
+	<?php foreach ($this->JeuTrie->cards as $carte) :?>
+		<th><?php echo $carte->value?></th>
+	<?php endforeach;?>
+	</tr>
+</table>
+
+
